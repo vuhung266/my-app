@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -38,7 +39,14 @@ export default function Home() {
             </a>
           </div>
         </div>
-
+         <div className="container mt-5">
+        <h1>Hello, world!</h1>
+        <button type="button" className="btn btn-primary mt-3" onClick={() => {
+          $('h1').fadeOut();
+        }}>
+          Click me to fade out the heading!
+        </button>
+      </div>
         <div className={styles.center}>
           <Image
             className={styles.logo}
